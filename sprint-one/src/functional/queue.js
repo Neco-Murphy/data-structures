@@ -19,7 +19,6 @@ var makeQueue = function(){
         storage[i-1] = storage[i];
       }
       delete storage[-1];
-      // debugger
       size--;
       return out
     }
