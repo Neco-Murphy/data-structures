@@ -14,9 +14,7 @@ var stackMethods = {
 	},
 	pop: function(){
 		this.count && this.count--;
-    var out = this.storage[this.count];
-    delete this.storage[this.count];
-    return out;
+    return this.storage[this.count];
 
 	},
 	size: function(){
