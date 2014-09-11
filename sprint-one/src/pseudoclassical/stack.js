@@ -12,9 +12,7 @@ Stack.prototype.push = function(value){
 
 Stack.prototype.pop = function(){
   this.count && this.count--;
-  var out = this.storage[this.count];
-  delete this.storage[this.count];
-  return out;
+  return this.storage[this.count];
 };
 
 Stack.prototype.size = function(){
