@@ -7,12 +7,22 @@ var makeSet = function(){
 var setPrototype = {};
 
 setPrototype.add = function(item){
+  if(!this._storage){
+  	this._storage = {};
+  }
+  this._storage[item] = item;
 };
 
 setPrototype.contains = function(item){
+	if(this._storage){
+    return this._storage[item] ? true : false;
+	}
 };
 
 setPrototype.remove = function(item){
+	if(this._storage){
+    delete this._storage[item];
+	}
 };
 
 /*
